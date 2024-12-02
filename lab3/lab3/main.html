@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="script" href="main.js">
+</head>
+
+<body>
+    <scriptz></scriptz>
+    <h1>Управление бюджетом</h1>
+
+    <div>
+        <h2>Добавить валюту</h2>
+        <form id="currencyForm">
+            <input type="text" id="currencyName" placeholder="Название валюты" required>
+            <button type="submit">Добавить валюту</button>
+        </form>
+        <ul id="currencyList"></ul>
+    </div>
+
+    <div>
+        <h2>Добавить тип расхода</h2>
+        <form id="expenseTypeForm">
+            <input type="text" id="expenseTypeName" placeholder="Название типа расхода" required>
+            <button type="submit">Добавить тип расхода</button>
+        </form>
+        <ul id="expenseTypeList"></ul>
+    </div>
+
+    <div>
+        <h2>Добавить доход</h2>
+        <form id="incomeForm">
+            <input type="number" id="incomeValue" placeholder="Сумма дохода" required>
+            <input type="text" id="incomeTypeName" placeholder="Тип дохода" required>
+            <input type="date" id="incomeDate" required>
+            <input type="text" id="incomeCurrency" placeholder="Валюта" required>
+            <button type="submit">Добавить доход</button>
+        </form>
+        <ul id="incomeList"></ul>
+    </div>
+
+    <div>
+        <h2>Добавить расход</h2>
+        <form id="expenseForm">
+            <input type="number" id="expenseValue" placeholder="Сумма расхода" required>
+            <input type="text" id="expenseTypeName" placeholder="Тип расхода" required>
+            <input type="date" id="expenseDate" required>
+            <input type="text" id="expenseCurrency" placeholder="Валюта" required>
+            <button type="submit">Добавить расход</button>
+        </form>
+        <ul id="expenseList"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

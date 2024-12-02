@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестирование класса Бюджет</title>
+</head>
+
+<body>
+    <h1>Тестирование класса "Бюджет"</h1>
+    <button onclick="testBudgetClass()">Запустить тесты</button>
+    <pre id="output"></pre>
+
+    <script src="script.js"></script>
+    <script>
+        function testBudgetClass() {
+            const outputElement = document.getElementById('output');
+            outputElement.textContent = '';
+
+            try {
+                // Создание объекта класса Бюджет
+                const budget = new Budget();
+
+                // Добавление валюты
+                const eur = new Currency("EUR");
+                eur.addRate("2024-11-11", 98);
+                budget.addCurrency(eur);
+                outputElement.textContent += "Добавлена валюта EUR с курсом 105.71\n";
+
+                // Добавление типа расхода и дохода
+                const hookahType = new Type("Кальянная");
+                budget.addExpenseType(hookahType);
+                outputElement.textContent += "Добавлен тип расхода: Кальянная\n";
+
+                const GameType = new Type("Игры");
+                budget.addExpenseType(GameType);
+                outputElement.textContent += "Добавлен тип расхода: Игры\n";
+
+                const salaryType = new Type("Зарплата");
+                budget.addIncomeType(salaryType);
+                outputElement.textContent += "Добавлен тип дохода: Зарплата\n";
+
+                // Добавление расхода и дохода
+                const expense1 = new Expense(200000, hookahType, "2024-02-23");
+                budget.addExpense(expense1);
+                outputElement.textContent += "Добавлен расход: 200000 на Кальянная\n";
+
+                const expense2 = new Expense(5000, GameType, "2024-02-14");
+                budget.addExpense(expense2);
+                outputElement.textContent += "Добавлен расход: 5000 на Игры\n";
+
+                const income = new Income(500000, salaryType, "2024-03-01");
+                budget.addIncome(income);
+                outputElement.textContent += "Добавлен доход: 500000 на Зарплата\n";
+
+                const expType = new Type("Расходы");
+                budget.addExpenseType(expType);
+                outputElement.textContent += "Добавлен тип расхода: Расходы\n";
+                const expenseall = new Expense(205000, expType, "2024-02-23");
+                budget.addExpense(expenseall);
+
+                // Расчет баланса
+                const balance = budget.getBalance("2024-01-01", "2024-12-31");
+                outputElement.textContent += `Баланс за период: ${balance}\n`;
+
+                // Фильтрация записей
+                const filteredEntries1 = budget.filterEntries("2024-01-01", "2024-12-31", "Доходы");
+                outputElement.textContent += "Отфильтрованные записи: \n";
+                outputElement.textContent += JSON.stringify(filteredEntries1, null, 2) + "\n";
+
+                const filteredEntries2 = budget.filterEntries("2024-01-01", "2024-12-31", "Расходы");
+                outputElement.textContent += "Отфильтрованные записи: \n";
+                outputElement.textContent += JSON.stringify(filteredEntries2, null, 2) + "\n";
+            } catch (error) {
+                outputElement.textContent += `Ошибка: ${error.message}\n`;
+            }
+        }
+    </script>
+</body>
+
+</html>

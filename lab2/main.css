@@ -1,0 +1,105 @@
+/* * {
+    box-sizing: border-box;
+} */
+
+.body {
+    margin: 0;
+    background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
+    text-align: center;
+    font-size: large;
+}
+
+.greetings {
+    height: 100px;
+    background-image: url("https://avatars.mds.yandex.net/i?id=77d295937adbcdcba72045712c5b4938-5163230-images-thumbs&n=13");
+
+}
+
+.ship__list {
+    font-size: 30px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-left: 0px;
+}
+
+.greatings__qq {
+    font-size: 30px;
+    margin-top: 0px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.greetings__captain {
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    color: #ffffff;
+}
+
+.greetings__qq_white {
+    text-align: center;
+    color: #ffffff;
+}
+
+.crew {
+    font-family: "Inter", sans-serif;
+    color: #fff;
+}
+
+.ship {
+    display: inline-block;
+    font-size: 25px;
+}
+
+.ship-photo {
+    display: inline-block;
+    width: 50%;
+    height: 50%;
+    margin: 0px 0px 80px 160px;
+}
+
+caption {
+    font-size: 30px;
+    padding-left: 0px;
+}
+
+ul {
+    padding-left: 40px;
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+ol {
+    padding-left: 30px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.table {
+    width: "90%";
+    height: "70%";
+    margin: 15px auto;
+    border-collapse: collapse;
+    align-items: "center";
+}
+
+tr {
+    text-align: center;
+}
+
+td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+}
+
+.footer {
+    height: 100px;
+    background-image: url("https://avatars.mds.yandex.net/i?id=77d295937adbcdcba72045712c5b4938-5163230-images-thumbs&n=13");
+}
