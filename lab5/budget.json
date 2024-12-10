@@ -1,1 +1,20 @@
-{}
+{
+  "currencies": [
+    {
+      "name": "рубль",
+      "rates": {}
+    }
+  ],
+  "expenseTypes": [
+    {
+      "name": "еда"
+    }
+  ],
+  "incomeTypes": [
+    {
+      "name": "зп"
+    }
+  ],
+  "expenses": [],
+  "incomes": []
+}

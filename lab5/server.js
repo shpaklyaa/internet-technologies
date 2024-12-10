@@ -11,6 +11,8 @@ const DATA_FILE = 'budget.json';
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 // API для получения данных бюджета
 app.get('/api/budget', (req, res) => {
     fs.readFile(DATA_FILE, 'utf-8', (err, data) => {
